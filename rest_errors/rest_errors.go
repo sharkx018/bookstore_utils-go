@@ -15,10 +15,11 @@ type RestErr interface {
 }
 
 type restErr struct {
-	message string        `json:"message"`
-	status  int           `json:"status"`
-	error   string        `json:"error"`
-	causes  []interface{} `json:"causes"`
+	message           string        `json:"message"`
+	status            int           `json:"status"`
+	error             string        `json:"error"`
+	causes            []interface{} `json:"causes"`
+	extraFiledFeature string        `json:"extra_filed_feature"`
 }
 
 func (e restErr) Message() string {
